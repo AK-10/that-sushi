@@ -6,8 +6,12 @@ target 'that_sushi' do
   use_frameworks!
   # Pods for that_sushi
   pod 'Realm'
+  pod 'RealmSwift'
 
-  target 'that_sushiTests' do
+  pod 'CSV.swift'
+  pod 'R.swift'
+  
+	target 'that_sushiTests' do
     inherit! :search_paths
     # Pods for testing
   end

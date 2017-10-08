@@ -11,9 +11,13 @@ import UIKit
 class firstViewController: UIViewController {
 
 //    @IBOutlet weak var subView: UIView!
+    override func loadView() {
+        super.loadView()
+        self.setNeedsStatusBarAppearanceUpdate()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setNeedsStatusBarAppearanceUpdate()
+        //self.setNeedsStatusBarAppearanceUpdate()
         // Do any additional setup after loading the view, typically from a nib.
 //        subView.layer.borderColor = UIColor.white as? CGColor
 //        subView.layer.borderWidth = 5
@@ -27,9 +31,10 @@ class firstViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         let sb: UIStoryboard = self.storyboard!
         let nextView = sb.instantiateViewController(withIdentifier: "homeVC")
-        nextView.modalTransitionStyle = .partialCurl
+        nextView.modalTransitionStyle = .flipHorizontal
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             self.present(nextView, animated: true, completion: nil)
         }

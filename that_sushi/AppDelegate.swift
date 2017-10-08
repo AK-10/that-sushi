@@ -7,18 +7,106 @@
 //
 
 import UIKit
+import RealmSwift
+import CSV
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        
+        realmMigration()
+//        print(self.csvToArray(fileName: "sushis", type: "csv"))
+        
+        let userDefault = UserDefaults.standard
+        let dict = ["firstLaunch": true]
+        
+        userDefault.register(defaults: dict)
+//        let sushiRealmPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] + "/sushi.realm"
+        
+        if userDefault.bool(forKey: "firstLaunch") {
+            userDefault.set(false, forKey: "firstLaunch")
+            let realm = try! Realm()
+            //sushis.realmのpath
+
+            let Arrays = csvArrayToData(array: csvToArray(fileName: "sushis", type: "csv"))
+            for data in Arrays {
+                print(data)
+                try! realm.write {
+                    realm.add(sushi.init(Int(data[0])!, data[1], data[2], data[3]))
+                }
+            }
+//            try! Realm().writeCopy(toFile: URL(string: sushiRealmPath)!, encryptionKey: Data(base64Encoded: "sushi"))
+//            print(sushiRealmPath)
+        } else {
+//            loadSeedRealm().objects(sushi.self)
+        }
         return true
     }
-
+    
+//    func loadSeedRealm() -> Realm {
+//        var config = Realm.Configuration()
+//        let path = Bundle.main.path(forResource: "sushi", ofType: "realm")
+//        config.fileURL = URL(string: path!)
+//        Realm.Configuration.defaultConfiguration = config
+//        return try! Realm()
+//    }
+    
+    func csvArrayToData(array: [String]) -> [[String]]{
+        var sushiArray: [[String]] = []
+        for elem in array {
+            sushiArray.append(elem.components(separatedBy: ","))
+        }
+        sushiArray.removeFirst()
+        sushiArray.removeLast()
+        
+        return sushiArray
+    }
+    
+    func csvToArray (fileName: String, type: String) -> [String]! {
+        var csvArr: [String] = []
+        if let csvPath = Bundle.main.path(forResource: fileName, ofType: type) {
+            do {
+                let csvStr = try String(contentsOfFile:csvPath, encoding:String.Encoding.utf8)
+                csvArr = csvStr.components(separatedBy: .newlines)
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        }
+        return csvArr
+    }
+    
+    func realmMigration() {
+        let config = Realm.Configuration(
+            // 新しいスキーマバージョンを設定します。以前のバージョンより大きくなければなりません。
+            // （スキーマバージョンを設定したことがなければ、最初は0が設定されています）
+            schemaVersion: 5,
+            
+            // マイグレーション処理を記述します。古いスキーマバージョンのRealmを開こうとすると
+            // 自動的にマイグレーションが実行されます。
+            migrationBlock: { migration, oldSchemaVersion in
+                // 最初のマイグレーションの場合、`oldSchemaVersion`は0です
+                if (oldSchemaVersion < 1) {
+                    // 何もする必要はありません！
+                    // Realmは自動的に新しく追加されたプロパティと、削除されたプロパティを認識します。
+                    // そしてディスク上のスキーマを自動的にアップデートします。
+                }
+        })
+        //        let path = Bundle.main.path(forResource: "SushiLib", ofType: "realm")
+        // デフォルトRealmに新しい設定を適用します
+        Realm.Configuration.defaultConfiguration = config
+        
+        // Realmファイルを開こうとしたときスキーマバージョンが異なれば、
+        // 自動的にマイグレーションが実行されます
+        let realm = try! Realm()
+        
+    }
+    
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

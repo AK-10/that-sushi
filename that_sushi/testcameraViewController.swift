@@ -7,26 +7,32 @@
 //
 
 import UIKit
+import CoreML
+import Vision
+import ImageIO
 
-class testcameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    var picture = UIImage()
+class testcameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CameraEvent {
+    
+    @IBOutlet weak var cameraButton: UIButton!
+    var inputImage: CIImage!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.cameraButton.addTarget(self, action: #selector(tocamera), for: .touchUpInside)
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func tocamera(_ sender: Any) {
-        let picker = UIImagePickerController()
-        picker.sourceType = .camera
-        picker.delegate = self
+    func tocamera() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .camera
+        imagePicker.delegate = self
         
-        present(picker, animated: true, completion: nil)
+        present(imagePicker, animated: true, completion: nil)
     }
 
     @IBAction func toLibrary(_ sender: Any) {
@@ -38,11 +44,30 @@ class testcameraViewController: UIViewController, UIImagePickerControllerDelegat
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         print(#function)
         //print(info[UIImagePickerControllerMediaType]!)
-        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            self.picture = pickedImage
-        }
+//        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+//        }
         let sb: UIStoryboard = self.storyboard!
-        let nextView = sb.instantiateViewController(withIdentifier: "resultVC")
+        let nextView = sb.instantiateViewController(withIdentifier: "resultVC") as! resultViewController
+        //nextView.takePicture = {
+            //self.tocamera()
+        //}
+        nextView.cameraEvent = self
+        picker.dismiss(animated: false, completion:{
+            guard let uiImage = info[UIImagePickerControllerOriginalImage] as? UIImage
+                else { fatalError("no image from image picker") }
+            guard let ciImage = CIImage(image: uiImage)
+                else { fatalError("can't create CIImage from UIImage") }
+            let orientation = CGImagePropertyOrientation(rawValue: UInt32(uiImage.imageOrientation.rawValue))
+            self.inputImage = ciImage.oriented(forExifOrientation: Int32(orientation!.rawValue))
+            
+            //リクエストハンドラの作成。ここでカメラで撮影した画像を渡します。
+            let handler = VNImageRequestHandler(ciImage: self.inputImage)
+            do {
+                try handler.perform([self.classificationRequest_sushi])
+            } catch {
+                print(error)
+            }
+        })
         present(nextView, animated: true, completion: nil)
     }
     
@@ -50,7 +75,7 @@ class testcameraViewController: UIViewController, UIImagePickerControllerDelegat
         print(#function)
         dismiss(animated: true, completion: nil)
     }
-    
+
     /*
     // MARK: - Navigation
 

@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import RealmSwift
 
 class libraryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBOutlet weak var sushiCollection: UICollectionView!
+    var selectedItem: sushi?
+    var Items: [sushi] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,11 +22,15 @@ class libraryViewController: UIViewController, UICollectionViewDelegate, UIColle
         sushiCollection.dataSource = self
         sushiCollection.delegate = self
         sushiCollection.backgroundColor = UIColor.clear
-
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        Items = Array(sushi.restore())
     }
     
     @IBAction func backHome(_ sender: Any) {
@@ -41,18 +48,36 @@ class libraryViewController: UIViewController, UICollectionViewDelegate, UIColle
     */
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: customCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! customCell
-        cell.num.text = "1"
-        
+        cell.sushiName.text? = Items[indexPath.row].name
+//        cell.sushiImage = UIImageView(image: UIImage(named: Items[indexPath.row].resultName))
+        cell.sushiImage.image = UIImage(named: Items[indexPath.row].resultName)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return Items.count
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedItem = Items[indexPath.row]
+        if selectedItem.confirmed {
+            performSegue(withIdentifier: "toDetailfromresult", sender: nil)
+        }
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "toDetailfromLibrary") {
+            let nextVC: detailViewController = segue.destination as! detailViewController
+            nextVC.receivedItem = selectedItem!
+            nextVC.parentID = self.restorationIdentifier!
+        }
+    }
 }
 
 class customCell: UICollectionViewCell{
     
-    @IBOutlet weak var num: UILabel!
+    @IBOutlet weak var sushiName: UILabel!
+    @IBOutlet weak var sushiImage: UIImageView!
+    
 }

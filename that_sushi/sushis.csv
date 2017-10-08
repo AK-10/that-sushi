@@ -1,0 +1,21 @@
+id, name, resultName, detailName
+1,まぐろ,maguro,nil
+2,サーモン,salmon,nil
+3,たい,tai,nil
+4,はまち,hamachi,nil
+5,えんがわ,engawa,nil
+6,えび,ebi,nil
+7,ホタテ,hotate,nil
+8,いか,ika,nil
+9,たこ,taco,nil
+10,アナゴ,anago,nil
+11,たまご,tamago,nil
+12,さば,saba,nil
+13,納豆巻き,natto,nil
+14,河童巻き,kappa,nil
+15,いくら,ikura,nil
+16,うに,uni,nil
+17,つぶ貝,tsubugai,nil
+18,California Roll,california,nil
+19,こはだ,kohada,nil
+20,あじ,aji,nil
