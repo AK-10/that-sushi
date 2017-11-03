@@ -70,3 +70,7 @@ fastlane/test_output
 
 # file
 .DS_Store
+*.mlmodel
+*.otf
+*.csv
+*.plist
