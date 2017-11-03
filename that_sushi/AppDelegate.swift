@@ -14,36 +14,32 @@ import CSV
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
+    var resName: String?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // realmのpath
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         
+        //migration
         realmMigration()
 //        print(self.csvToArray(fileName: "sushis", type: "csv"))
         
         let userDefault = UserDefaults.standard
         let dict = ["firstLaunch": true]
-        
         userDefault.register(defaults: dict)
-//        let sushiRealmPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] + "/sushi.realm"
         
         if userDefault.bool(forKey: "firstLaunch") {
             userDefault.set(false, forKey: "firstLaunch")
             let realm = try! Realm()
-            //sushis.realmのpath
 
             let Arrays = csvArrayToData(array: csvToArray(fileName: "sushis", type: "csv"))
             for data in Arrays {
-                print(data)
                 try! realm.write {
                     realm.add(sushi.init(Int(data[0])!, data[1], data[2], data[3]))
                 }
             }
-//            try! Realm().writeCopy(toFile: URL(string: sushiRealmPath)!, encryptionKey: Data(base64Encoded: "sushi"))
-//            print(sushiRealmPath)
-        } else {
-//            loadSeedRealm().objects(sushi.self)
         }
         return true
     }

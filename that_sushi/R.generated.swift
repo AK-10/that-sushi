@@ -430,7 +430,6 @@ struct _R: Rswift.Validatable {
         if UIKit.UIImage(named: "sinboard_kanban") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'sinboard_kanban' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "splash") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'splash' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "detail_btn") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'detail_btn' is used in storyboard 'Main', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "syari") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'syari' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "wallpaper") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'wallpaper' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "back2home_btn") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'back2home_btn' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "library_btn") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'library_btn' is used in storyboard 'Main', but couldn't be loaded.") }

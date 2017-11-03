@@ -13,6 +13,7 @@
 		118BDC401F6E9472006F026E /* sushis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118BDC3F1F6E9472006F026E /* sushis.swift */; };
 		11ACE3A31F88B3C1005E9BA9 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ACE3A21F88B3C0005E9BA9 /* R.generated.swift */; };
 		11ACE3A51F88B481005E9BA9 /* sushis.csv in Resources */ = {isa = PBXBuildFile; fileRef = 11ACE3A41F88B481005E9BA9 /* sushis.csv */; };
+		11ACE3AC1F89FD88005E9BA9 /* sushiModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 11ACE3AB1F89FD88005E9BA9 /* sushiModel.mlmodel */; };
 		11B781ED1F6057C6004832D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B781EC1F6057C6004832D7 /* AppDelegate.swift */; };
 		11B781EF1F6057C6004832D7 /* firstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B781EE1F6057C6004832D7 /* firstViewController.swift */; };
 		11B781F21F6057C6004832D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11B781F01F6057C6004832D7 /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 		11ACE3A21F88B3C0005E9BA9 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		11ACE3A41F88B481005E9BA9 /* sushis.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sushis.csv; sourceTree = "<group>"; };
 		11ACE3A61F88C27A005E9BA9 /* that_sushi-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "that_sushi-Bridging-Header.h"; sourceTree = "<group>"; };
+		11ACE3AB1F89FD88005E9BA9 /* sushiModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = sushiModel.mlmodel; sourceTree = "<group>"; };
 		11B781E91F6057C6004832D7 /* that_sushi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = that_sushi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11B781EC1F6057C6004832D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11B781EE1F6057C6004832D7 /* firstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				11B781EE1F6057C6004832D7 /* firstViewController.swift */,
 				11ACE3A41F88B481005E9BA9 /* sushis.csv */,
 				11FC7A9F1F6680E900188B77 /* resultViewController.swift */,
+				11ACE3AB1F89FD88005E9BA9 /* sushiModel.mlmodel */,
 				113DD1B01F6C38DB0098539B /* detailViewController.swift */,
 				11B781F01F6057C6004832D7 /* Main.storyboard */,
 				11FC7A9D1F664D8C00188B77 /* libraryViewController.swift */,
@@ -272,7 +275,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "小西篤志";
 				TargetAttributes = {
 					11B781E81F6057C6004832D7 = {
@@ -499,6 +502,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11FC7AA01F6680E900188B77 /* resultViewController.swift in Sources */,
+				11ACE3AC1F89FD88005E9BA9 /* sushiModel.mlmodel in Sources */,
 				11B781EF1F6057C6004832D7 /* firstViewController.swift in Sources */,
 				114678B01F653BCA003CC402 /* testcameraViewController.swift in Sources */,
 				11ACE3A31F88B3C1005E9BA9 /* R.generated.swift in Sources */,
@@ -570,7 +574,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -578,7 +584,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -620,7 +630,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -628,7 +640,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

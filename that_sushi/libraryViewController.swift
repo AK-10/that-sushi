@@ -47,10 +47,17 @@ class libraryViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     */
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell: customCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! customCell
-        cell.sushiName.text? = Items[indexPath.row].name
-//        cell.sushiImage = UIImageView(image: UIImage(named: Items[indexPath.row].resultName))
-        cell.sushiImage.image = UIImage(named: Items[indexPath.row].resultName)
+        
+        if Items[indexPath.row].confirmed {
+            cell.sushiName.text? = Items[indexPath.row].name
+            cell.sushiImage.image = UIImage(named: Items[indexPath.row].resultName)
+        } else {
+            cell.sushiName.text? = "?  ?  ?"
+            cell.sushiImage.image = UIImage(named: "syari")
+        }
+        
         return cell
     }
     

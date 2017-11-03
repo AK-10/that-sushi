@@ -33,12 +33,8 @@ class sushi: Object{
     func predicted() {
 //        self.confirmed = true
         let realm = try! Realm()
-        do {
-            try! realm.write {
-                self.confirmed = true
-            }
-        } catch {
-            print("some error happened")
+        try! realm.write {
+            self.confirmed = true
         }
     }
     
@@ -46,5 +42,10 @@ class sushi: Object{
     class func restore() -> Results<sushi> {
         let realm = try! Realm()
         return realm.objects(sushi.self)
+    }
+    
+    class func getSushiFromLabel(label: String) -> sushi{
+        let realm = try! Realm()
+        return realm.objects(sushi.self).filter("resultName == %@", label)[0]
     }
 }

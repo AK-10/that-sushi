@@ -12,15 +12,17 @@ class resultViewController: UIViewController {
     
     @IBOutlet weak var resultImage: UIImageView!
     
+    @IBOutlet weak var resultNameLabel: UILabel!
     var cameraEvent: CameraEvent?
     
     //typealias Callback = () -> Void
     
     var takePicture: (() -> Void)?
+    var Items: [sushi] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        Items = Array(sushi.restore())
         // Do any additional setup after loading the view.
     }
 
@@ -30,8 +32,16 @@ class resultViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        let delegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        let resultItem = sushi.getSushiFromLabel(label: delegate.resName!)
+
+        self.resultNameLabel.text = resultItem.name
+        self.resultImage.image = UIImage(named: resultItem.resultName)
+        resultItem.predicted()
     }
+    
     /*
     // MARK: - Navigation
 
