@@ -14,7 +14,7 @@ class resultViewController: UIViewController {
     
     @IBOutlet weak var resultNameLabel: UILabel!
     var cameraEvent: CameraEvent?
-    
+    var resultItem: sushi!
     //typealias Callback = () -> Void
     
     var takePicture: (() -> Void)?
@@ -35,7 +35,7 @@ class resultViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         let delegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
-        let resultItem = sushi.getSushiFromLabel(label: delegate.resName!)
+        resultItem = sushi.getSushiFromLabel(label: delegate.resName!)
 
         self.resultNameLabel.text = resultItem.name
         self.resultImage.image = UIImage(named: resultItem.resultName)
@@ -64,7 +64,7 @@ class resultViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let nextVC: detailViewController = segue.destination as! detailViewController
-//        nextVC.receivedItem =
+        nextVC.receivedItem = resultItem
         nextVC.parentID = self.restorationIdentifier!
     }
 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -260,7 +260,11 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="k9R-lb-ozn" id="iYV-wB-Oul"/>
+                        <outlet property="detailImage" destination="kPF-dD-vL3" id="1La-df-bxT"/>
+                        <outlet property="detailText" destination="NKt-dd-FRC" id="mo3-ZA-9Al"/>
+                        <outlet property="name" destination="8ST-61-cMb" id="kst-qZ-9xh"/>
                         <outlet property="numLabel" destination="8ST-61-cMb" id="AJY-os-hWE"/>
+                        <outlet property="scientificName" destination="b7w-q4-9c1" id="zIL-e8-742"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w5W-mG-DJE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -398,6 +402,6 @@
         <image name="wallpaper" width="187" height="333"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="unU-ld-9H4"/>
+        <segue reference="wmy-0Q-py8"/>
     </inferredMetricsTieBreakers>
 </document>

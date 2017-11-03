@@ -11,7 +11,12 @@ import UIKit
 class detailViewController: UIViewController {
     
     @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var numLabel: UILabel!
+    
+    @IBOutlet weak var scientificName: UILabel!
+    @IBOutlet weak var name: UILabel!
+    
+    @IBOutlet weak var detailImage: UIImageView!
+    @IBOutlet weak var detailText: UITextView!
     
     var receivedItem: sushi!
     var parentID: String?
@@ -30,7 +35,7 @@ class detailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        numLabel.text = receivedItem.name
+        name.text = receivedItem.name
         if parentID == "libraryVC"{
             backButton.setBackgroundImage(#imageLiteral(resourceName: "back2home_btn"), for: .normal)
         } else if parentID == "resultVC" {
