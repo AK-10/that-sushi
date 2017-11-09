@@ -79,7 +79,7 @@ class testcameraViewController: UIViewController, UIImagePickerControllerDelegat
     lazy var classificationRequest_sushi: VNCoreMLRequest = {
         do {
             var model: VNCoreMLModel? = nil
-            model = try! VNCoreMLModel(for: sushi().model)
+            model = try! VNCoreMLModel(for: sushimodel().model)
             return VNCoreMLRequest(model: model!, completionHandler: self.handleClassification)
         } catch {
             fatalError("can't load Vision ML model: \(error)")

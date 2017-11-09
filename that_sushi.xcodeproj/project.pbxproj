@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		112B065D1FB46BB500E1AC44 /* testcameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114678AF1F653BCA003CC402 /* testcameraViewController.swift */; };
+		112B065E1FB46BBC00E1AC44 /* sushimodel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 114445471FB4634C006159CA /* sushimodel.mlmodel */; };
+		112B065F1FB46BC000E1AC44 /* sushi.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 11DFEAA21FB45BBE0007F7A7 /* sushi.mlmodel */; };
 		113DD1AA1F6A625D0098539B /* WawaSC-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 113DD1A91F6A625D0098539B /* WawaSC-Regular.otf */; };
 		113DD1B11F6C38DB0098539B /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113DD1B01F6C38DB0098539B /* detailViewController.swift */; };
-		114678B01F653BCA003CC402 /* testcameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114678AF1F653BCA003CC402 /* testcameraViewController.swift */; };
 		118BDC401F6E9472006F026E /* sushis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118BDC3F1F6E9472006F026E /* sushis.swift */; };
-		11ACE3A31F88B3C1005E9BA9 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ACE3A21F88B3C0005E9BA9 /* R.generated.swift */; };
 		11ACE3A51F88B481005E9BA9 /* sushis.csv in Resources */ = {isa = PBXBuildFile; fileRef = 11ACE3A41F88B481005E9BA9 /* sushis.csv */; };
 		11B781ED1F6057C6004832D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B781EC1F6057C6004832D7 /* AppDelegate.swift */; };
 		11B781EF1F6057C6004832D7 /* firstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B781EE1F6057C6004832D7 /* firstViewController.swift */; };
@@ -20,7 +21,6 @@
 		11B781F71F6057C6004832D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11B781F51F6057C6004832D7 /* LaunchScreen.storyboard */; };
 		11B782021F6057C6004832D7 /* that_sushiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B782011F6057C6004832D7 /* that_sushiTests.swift */; };
 		11B7820D1F6057C6004832D7 /* that_sushiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7820C1F6057C6004832D7 /* that_sushiUITests.swift */; };
-		11DFEAA31FB45BBE0007F7A7 /* sushi.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 11DFEAA21FB45BBE0007F7A7 /* sushi.mlmodel */; };
 		11FC7A9E1F664D8C00188B77 /* libraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FC7A9D1F664D8C00188B77 /* libraryViewController.swift */; };
 		11FC7AA01F6680E900188B77 /* resultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FC7A9F1F6680E900188B77 /* resultViewController.swift */; };
 		742E77DC729AC992D6979F30 /* Pods_that_sushiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F806F0B4A580435AAF4378 /* Pods_that_sushiUITests.framework */; };
@@ -48,9 +48,9 @@
 /* Begin PBXFileReference section */
 		113DD1A91F6A625D0098539B /* WawaSC-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WawaSC-Regular.otf"; sourceTree = "<group>"; };
 		113DD1B01F6C38DB0098539B /* detailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
+		114445471FB4634C006159CA /* sushimodel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = sushimodel.mlmodel; sourceTree = "<group>"; };
 		114678AF1F653BCA003CC402 /* testcameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testcameraViewController.swift; sourceTree = "<group>"; };
 		118BDC3F1F6E9472006F026E /* sushis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sushis.swift; sourceTree = "<group>"; };
-		11ACE3A21F88B3C0005E9BA9 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		11ACE3A41F88B481005E9BA9 /* sushis.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sushis.csv; sourceTree = "<group>"; };
 		11ACE3A61F88C27A005E9BA9 /* that_sushi-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "that_sushi-Bridging-Header.h"; sourceTree = "<group>"; };
 		11B781E91F6057C6004832D7 /* that_sushi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = that_sushi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,8 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				11DFEAA21FB45BBE0007F7A7 /* sushi.mlmodel */,
+				114445471FB4634C006159CA /* sushimodel.mlmodel */,
 				11ACE3A61F88C27A005E9BA9 /* that_sushi-Bridging-Header.h */,
-				11ACE3A21F88B3C0005E9BA9 /* R.generated.swift */,
 				113DD1A81F6A61400098539B /* font */,
 				11B781EC1F6057C6004832D7 /* AppDelegate.swift */,
 				11B781EE1F6057C6004832D7 /* firstViewController.swift */,
@@ -210,7 +210,6 @@
 			buildConfigurationList = 11B782111F6057C6004832D7 /* Build configuration list for PBXNativeTarget "that_sushi" */;
 			buildPhases = (
 				1516DB8AA75A693A7B1082FE /* [CP] Check Pods Manifest.lock */,
-				1136380A1F88AAD4003CDD43 /* ShellScript */,
 				11B781E51F6057C6004832D7 /* Sources */,
 				11B781E61F6057C6004832D7 /* Frameworks */,
 				11B781E71F6057C6004832D7 /* Resources */,
@@ -361,19 +360,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-that_sushiUITests/Pods-that_sushiUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1136380A1F88AAD4003CDD43 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT/that_sushi\"";
-		};
 		1516DB8AA75A693A7B1082FE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -502,14 +488,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				11FC7AA01F6680E900188B77 /* resultViewController.swift in Sources */,
-				11DFEAA31FB45BBE0007F7A7 /* sushi.mlmodel in Sources */,
+				112B065D1FB46BB500E1AC44 /* testcameraViewController.swift in Sources */,
 				11B781EF1F6057C6004832D7 /* firstViewController.swift in Sources */,
-				114678B01F653BCA003CC402 /* testcameraViewController.swift in Sources */,
-				11ACE3A31F88B3C1005E9BA9 /* R.generated.swift in Sources */,
 				11FC7A9E1F664D8C00188B77 /* libraryViewController.swift in Sources */,
 				118BDC401F6E9472006F026E /* sushis.swift in Sources */,
+				112B065F1FB46BC000E1AC44 /* sushi.mlmodel in Sources */,
 				11B781ED1F6057C6004832D7 /* AppDelegate.swift in Sources */,
 				113DD1B11F6C38DB0098539B /* detailViewController.swift in Sources */,
+				112B065E1FB46BBC00E1AC44 /* sushimodel.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

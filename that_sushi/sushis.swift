@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class sushi: Object{
+class Sushi: Object{
     dynamic var id = 0
     dynamic var name: String = ""
     dynamic var confirmed: Bool = false
@@ -44,17 +44,17 @@ class sushi: Object{
     }
     
 
-    class func restore() -> [sushi] {
+    class func restore() -> [Sushi] {
         let realm = try! Realm()
-        var sushis: [sushi] = []
-        for s in realm.objects(sushi.self) {
+        var sushis: [Sushi] = []
+        for s in realm.objects(Sushi.self) {
             sushis.append(s)
         }
         return sushis
     }
     
-    class func getSushiFromLabel(label: String) -> sushi{
+    class func getSushiFromLabel(label: String) -> Sushi{
         let realm = try! Realm()
-        return realm.objects(sushi.self).filter("resultName == %@", label)[0]
+        return realm.objects(Sushi.self).filter("resultName == %@", label)[0]
     }
 }

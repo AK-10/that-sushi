@@ -14,7 +14,7 @@ class resultViewController: UIViewController {
     
     @IBOutlet weak var resultNameLabel: UILabel!
     var cameraEvent: CameraEvent?
-    var resultItem: sushi!
+    var resultItem: Sushi?
     
 //    var Items: [sushi] = []
     
@@ -33,11 +33,11 @@ class resultViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         let delegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
-        resultItem = sushi.getSushiFromLabel(label: delegate.resName!)
+        resultItem = Sushi.getSushiFromLabel(label: delegate.resName!)
 
-        self.resultNameLabel.text = resultItem.name
-        self.resultImage.image = UIImage(named: resultItem.resultName)
-        resultItem.predicted()
+        self.resultNameLabel.text = resultItem?.name
+        self.resultImage.image = UIImage(named: (resultItem?.resultName)!)
+        resultItem?.predicted()
     }
     
     /*
@@ -71,3 +71,4 @@ class resultViewController: UIViewController {
 protocol CameraEvent {
     func tocamera()
 }
+

@@ -37,7 +37,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let Arrays = csvArrayToData(array: csvToArray(fileName: "sushis", type: "csv"))
             for data in Arrays {
                 try! realm.write {
-                    realm.add(sushi.init(Int(data[0])!, data[1], data[2], data[3], data[4], data[5]))
+                    if #available(iOS 11.0, *) {
+                        realm.add(Sushi(Int(data[0])!, data[1], data[2], data[3], data[4], data[5]))
+                    } else {
+                        // Fallback on earlier versions
+                    }
                 }
             }
         }

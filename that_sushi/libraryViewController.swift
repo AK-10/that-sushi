@@ -9,11 +9,13 @@
 import UIKit
 import RealmSwift
 
+@available(iOS 11.0, *)
+@available(iOS 11.0, *)
 class libraryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBOutlet weak var sushiCollection: UICollectionView!
-    var selectedItem: sushi?
-    var Items: [sushi] = []
+    var selectedItem: Sushi?
+    var Items: [Sushi] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +32,7 @@ class libraryViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        Items = sushi.restore()
+        Items = Sushi.restore()
     }
     
     @IBAction func backHome(_ sender: Any) {

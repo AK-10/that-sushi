@@ -18,7 +18,7 @@ class detailViewController: UIViewController {
     @IBOutlet weak var detailImage: UIImageView!
     @IBOutlet weak var detailText: UITextView!
     
-    var receivedItem: sushi?
+    var receivedItem: Sushi?
     var parentID: String?
     
     override func viewDidLoad() {

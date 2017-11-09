@@ -554,6 +554,7 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
+    @available(iOS 11.0, *)
     struct main: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
       typealias InitialController = firstViewController
       
