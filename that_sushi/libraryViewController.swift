@@ -30,7 +30,7 @@ class libraryViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        Items = Array(sushi.restore())
+        Items = sushi.restore()
     }
     
     @IBAction func backHome(_ sender: Any) {
@@ -66,9 +66,10 @@ class libraryViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedItem = Items[indexPath.row]
-        if selectedItem.confirmed {
-            performSegue(withIdentifier: "toDetailfromresult", sender: nil)
+        selectedItem = Items[indexPath.row]
+//        print(selectedItem?.name + selectedItem.confirmed.description)
+        if (selectedItem?.confirmed)! {
+            performSegue(withIdentifier: "toDetailfromLibrary", sender: nil)
         }
         
     }
@@ -76,7 +77,7 @@ class libraryViewController: UIViewController, UICollectionViewDelegate, UIColle
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "toDetailfromLibrary") {
             let nextVC: detailViewController = segue.destination as! detailViewController
-            nextVC.receivedItem = selectedItem!
+            nextVC.receivedItem = selectedItem
             nextVC.parentID = self.restorationIdentifier!
         }
     }

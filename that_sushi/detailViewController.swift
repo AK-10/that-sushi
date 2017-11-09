@@ -18,7 +18,7 @@ class detailViewController: UIViewController {
     @IBOutlet weak var detailImage: UIImageView!
     @IBOutlet weak var detailText: UITextView!
     
-    var receivedItem: sushi!
+    var receivedItem: sushi?
     var parentID: String?
     
     override func viewDidLoad() {
@@ -35,7 +35,14 @@ class detailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        name.text = receivedItem.name
+        name.text = receivedItem!.name
+        scientificName.text = receivedItem!.scientificName
+        detailImage.image = UIImage(named: receivedItem!.detailName)
+        let texts = receivedItem?.explanation.components(separatedBy: "@")
+        detailText.text.removeAll()
+        for str in texts! {
+            detailText.text.append(str + "\n")
+        }
         if parentID == "libraryVC"{
             backButton.setBackgroundImage(#imageLiteral(resourceName: "back2home_btn"), for: .normal)
         } else if parentID == "resultVC" {

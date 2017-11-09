@@ -15,19 +15,24 @@ class sushi: Object{
     dynamic var confirmed: Bool = false
     dynamic var resultName: String = ""
     dynamic var detailName: String = ""
+    dynamic var scientificName: String = ""
+    dynamic var explanation: String = ""
+    
 //    dynamic var icon: NSData? = nil
     
     func primaryKey() -> String? {
         return "id"
     }
  
-    convenience init(_ _id: Int, _ _name: String, _ _res: String, _ _det: String) {
+    convenience init(_ identifier: Int, _ fishName: String, _ sName: String, _ resName: String, _ detName: String, _ ex: String) {
         self.init()
-        self.id = _id
-        self.name = _name
+        self.id = identifier
+        self.name = fishName
         self.confirmed = false
-        self.resultName = _res
-        self.detailName = _det
+        self.resultName = resName
+        self.detailName = detName
+        self.scientificName = sName
+        self.explanation = ex
     }
     
     func predicted() {
@@ -39,9 +44,13 @@ class sushi: Object{
     }
     
 
-    class func restore() -> Results<sushi> {
+    class func restore() -> [sushi] {
         let realm = try! Realm()
-        return realm.objects(sushi.self)
+        var sushis: [sushi] = []
+        for s in realm.objects(sushi.self) {
+            sushis.append(s)
+        }
+        return sushis
     }
     
     class func getSushiFromLabel(label: String) -> sushi{

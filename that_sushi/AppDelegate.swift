@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let Arrays = csvArrayToData(array: csvToArray(fileName: "sushis", type: "csv"))
             for data in Arrays {
                 try! realm.write {
-                    realm.add(sushi.init(Int(data[0])!, data[1], data[2], data[3]))
+                    realm.add(sushi.init(Int(data[0])!, data[1], data[2], data[3], data[4], data[5]))
                 }
             }
         }
@@ -80,7 +80,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let config = Realm.Configuration(
             // 新しいスキーマバージョンを設定します。以前のバージョンより大きくなければなりません。
             // （スキーマバージョンを設定したことがなければ、最初は0が設定されています）
-            schemaVersion: 5,
+            schemaVersion: 10,
             
             // マイグレーション処理を記述します。古いスキーマバージョンのRealmを開こうとすると
             // 自動的にマイグレーションが実行されます。

@@ -15,14 +15,12 @@ class resultViewController: UIViewController {
     @IBOutlet weak var resultNameLabel: UILabel!
     var cameraEvent: CameraEvent?
     var resultItem: sushi!
-    //typealias Callback = () -> Void
     
-    var takePicture: (() -> Void)?
-    var Items: [sushi] = []
+//    var Items: [sushi] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Items = Array(sushi.restore())
+//        Items = Array(sushi.restore())
         // Do any additional setup after loading the view.
     }
 
@@ -66,6 +64,7 @@ class resultViewController: UIViewController {
         let nextVC: detailViewController = segue.destination as! detailViewController
         nextVC.receivedItem = resultItem
         nextVC.parentID = self.restorationIdentifier!
+//        print(nextVC.parentID!)
     }
 }
 
