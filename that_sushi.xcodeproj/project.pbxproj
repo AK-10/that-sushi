@@ -13,7 +13,6 @@
 		118BDC401F6E9472006F026E /* sushis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118BDC3F1F6E9472006F026E /* sushis.swift */; };
 		11ACE3A31F88B3C1005E9BA9 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ACE3A21F88B3C0005E9BA9 /* R.generated.swift */; };
 		11ACE3A51F88B481005E9BA9 /* sushis.csv in Resources */ = {isa = PBXBuildFile; fileRef = 11ACE3A41F88B481005E9BA9 /* sushis.csv */; };
-		11ACE3AC1F89FD88005E9BA9 /* sushiModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 11ACE3AB1F89FD88005E9BA9 /* sushiModel.mlmodel */; };
 		11B781ED1F6057C6004832D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B781EC1F6057C6004832D7 /* AppDelegate.swift */; };
 		11B781EF1F6057C6004832D7 /* firstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B781EE1F6057C6004832D7 /* firstViewController.swift */; };
 		11B781F21F6057C6004832D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11B781F01F6057C6004832D7 /* Main.storyboard */; };
@@ -21,6 +20,7 @@
 		11B781F71F6057C6004832D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11B781F51F6057C6004832D7 /* LaunchScreen.storyboard */; };
 		11B782021F6057C6004832D7 /* that_sushiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B782011F6057C6004832D7 /* that_sushiTests.swift */; };
 		11B7820D1F6057C6004832D7 /* that_sushiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7820C1F6057C6004832D7 /* that_sushiUITests.swift */; };
+		11DFEAA31FB45BBE0007F7A7 /* sushi.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 11DFEAA21FB45BBE0007F7A7 /* sushi.mlmodel */; };
 		11FC7A9E1F664D8C00188B77 /* libraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FC7A9D1F664D8C00188B77 /* libraryViewController.swift */; };
 		11FC7AA01F6680E900188B77 /* resultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FC7A9F1F6680E900188B77 /* resultViewController.swift */; };
 		742E77DC729AC992D6979F30 /* Pods_that_sushiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F806F0B4A580435AAF4378 /* Pods_that_sushiUITests.framework */; };
@@ -53,7 +53,6 @@
 		11ACE3A21F88B3C0005E9BA9 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		11ACE3A41F88B481005E9BA9 /* sushis.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sushis.csv; sourceTree = "<group>"; };
 		11ACE3A61F88C27A005E9BA9 /* that_sushi-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "that_sushi-Bridging-Header.h"; sourceTree = "<group>"; };
-		11ACE3AB1F89FD88005E9BA9 /* sushiModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = sushiModel.mlmodel; sourceTree = "<group>"; };
 		11B781E91F6057C6004832D7 /* that_sushi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = that_sushi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11B781EC1F6057C6004832D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11B781EE1F6057C6004832D7 /* firstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +66,7 @@
 		11B782081F6057C6004832D7 /* that_sushiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = that_sushiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11B7820C1F6057C6004832D7 /* that_sushiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = that_sushiUITests.swift; sourceTree = "<group>"; };
 		11B7820E1F6057C6004832D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11DFEAA21FB45BBE0007F7A7 /* sushi.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = sushi.mlmodel; sourceTree = "<group>"; };
 		11FC7A9D1F664D8C00188B77 /* libraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = libraryViewController.swift; sourceTree = "<group>"; };
 		11FC7A9F1F6680E900188B77 /* resultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = resultViewController.swift; sourceTree = "<group>"; };
 		1BE0949560237F5A00867DFC /* Pods-that_sushiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-that_sushiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-that_sushiTests/Pods-that_sushiTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +141,7 @@
 		11B781EB1F6057C6004832D7 /* that_sushi */ = {
 			isa = PBXGroup;
 			children = (
+				11DFEAA21FB45BBE0007F7A7 /* sushi.mlmodel */,
 				11ACE3A61F88C27A005E9BA9 /* that_sushi-Bridging-Header.h */,
 				11ACE3A21F88B3C0005E9BA9 /* R.generated.swift */,
 				113DD1A81F6A61400098539B /* font */,
@@ -148,7 +149,6 @@
 				11B781EE1F6057C6004832D7 /* firstViewController.swift */,
 				11ACE3A41F88B481005E9BA9 /* sushis.csv */,
 				11FC7A9F1F6680E900188B77 /* resultViewController.swift */,
-				11ACE3AB1F89FD88005E9BA9 /* sushiModel.mlmodel */,
 				113DD1B01F6C38DB0098539B /* detailViewController.swift */,
 				11B781F01F6057C6004832D7 /* Main.storyboard */,
 				11FC7A9D1F664D8C00188B77 /* libraryViewController.swift */,
@@ -502,7 +502,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11FC7AA01F6680E900188B77 /* resultViewController.swift in Sources */,
-				11ACE3AC1F89FD88005E9BA9 /* sushiModel.mlmodel in Sources */,
+				11DFEAA31FB45BBE0007F7A7 /* sushi.mlmodel in Sources */,
 				11B781EF1F6057C6004832D7 /* firstViewController.swift in Sources */,
 				114678B01F653BCA003CC402 /* testcameraViewController.swift in Sources */,
 				11ACE3A31F88B3C1005E9BA9 /* R.generated.swift in Sources */,
