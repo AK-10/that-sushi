@@ -216,7 +216,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ST-61-cMb">
-                                <rect key="frame" x="104" y="133" width="166" height="47"/>
+                                <rect key="frame" x="53" y="133" width="269" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="DFWaWaSC-W5" family="Wawati SC" pointSize="40"/>
                                 <nil key="textColor"/>
@@ -267,7 +267,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w5W-mG-DJE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1136.8" y="1540.4797601199402"/>
+            <point key="canvasLocation" x="1136.5" y="1539.5"/>
         </scene>
         <!--Library View Controller-->
         <scene sceneID="gt7-xe-EwB">
@@ -385,10 +385,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="back2home_btn" width="83" height="27"/>
+        <image name="back2home_btn" width="167" height="53"/>
         <image name="backboard" width="169" height="238"/>
         <image name="camera_btn" width="70" height="70"/>
-        <image name="detail_btn" width="83" height="26"/>
+        <image name="detail_btn" width="166" height="53"/>
         <image name="home_image" width="187" height="240"/>
         <image name="library_btn" width="70" height="70"/>
         <image name="manaita" width="75" height="75"/>
@@ -400,6 +400,6 @@
         <image name="wallpaper" width="187" height="333"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wmy-0Q-py8"/>
+        <segue reference="unU-ld-9H4"/>
     </inferredMetricsTieBreakers>
 </document>
