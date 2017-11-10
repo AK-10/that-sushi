@@ -44,7 +44,7 @@ class detailViewController: UIViewController {
             detailText.text.append(str + "\n")
         }
         if parentID == "libraryVC"{
-            backButton.setBackgroundImage(#imageLiteral(resourceName: "back2home_btn"), for: .normal)
+            backButton.setBackgroundImage(#imageLiteral(resourceName: "back_lib"), for: .normal)
         } else if parentID == "resultVC" {
             backButton.setBackgroundImage(#imageLiteral(resourceName: "back_predicted"), for: .normal)
         }

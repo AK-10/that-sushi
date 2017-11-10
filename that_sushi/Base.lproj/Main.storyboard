@@ -208,13 +208,6 @@
                                     <constraint firstAttribute="height" constant="476" id="fed-k2-IoU"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sinboard_kanban" translatesAutoresizingMaskIntoConstraints="NO" id="hmu-ft-Dw7">
-                                <rect key="frame" x="53" y="28" width="269" height="53"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="53" id="8qt-1L-Cr5"/>
-                                    <constraint firstAttribute="width" constant="269" id="qSK-Je-uoE"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ST-61-cMb">
                                 <rect key="frame" x="53" y="133" width="269" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -223,9 +216,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7w-q4-9c1">
-                                <rect key="frame" x="75" y="178" width="221" height="34"/>
+                                <rect key="frame" x="26" y="178" width="322" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -243,14 +236,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kanban" translatesAutoresizingMaskIntoConstraints="NO" id="vcR-8E-yLH">
+                                <rect key="frame" x="37" y="20" width="300" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="解  説" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lez-rI-A4D">
+                                <rect key="frame" x="57" y="20" width="260" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="DFWaWaSC-W5" family="Wawati SC" pointSize="32"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="9Cp-9P-sWA" firstAttribute="leading" secondItem="Yhf-iV-pCb" secondAttribute="leading" id="1Hw-TV-F7L"/>
                             <constraint firstItem="qjq-1V-2Yt" firstAttribute="centerX" secondItem="Yhf-iV-pCb" secondAttribute="centerX" id="BCt-MM-PNa"/>
-                            <constraint firstItem="hmu-ft-Dw7" firstAttribute="centerX" secondItem="Yhf-iV-pCb" secondAttribute="centerX" id="Eze-Xe-Nk8"/>
-                            <constraint firstItem="hmu-ft-Dw7" firstAttribute="top" secondItem="YAO-Pe-wyM" secondAttribute="bottom" constant="8" id="JDe-Vg-Avs"/>
-                            <constraint firstItem="qjq-1V-2Yt" firstAttribute="top" secondItem="hmu-ft-Dw7" secondAttribute="bottom" constant="14" id="Yqm-am-oT2"/>
                             <constraint firstAttribute="trailing" secondItem="9Cp-9P-sWA" secondAttribute="trailing" id="bvO-fT-3L3"/>
                             <constraint firstItem="j2i-7O-iaB" firstAttribute="top" secondItem="9Cp-9P-sWA" secondAttribute="bottom" id="jUz-lI-IsK"/>
                             <constraint firstItem="9Cp-9P-sWA" firstAttribute="top" secondItem="Yhf-iV-pCb" secondAttribute="top" id="leC-27-ZB0"/>
@@ -267,7 +268,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w5W-mG-DJE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1136.5" y="1539.5"/>
+            <point key="canvasLocation" x="1135.2" y="1538.6806596701651"/>
         </scene>
         <!--Library View Controller-->
         <scene sceneID="gt7-xe-EwB">
@@ -283,13 +284,6 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="jvV-Sv-WJs">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oshinagaki" translatesAutoresizingMaskIntoConstraints="NO" id="oUv-qn-G8i">
-                                <rect key="frame" x="45" y="30" width="285" height="56"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="285" id="j34-JK-0U9"/>
-                                    <constraint firstAttribute="height" constant="56" id="qaM-GM-3NT"/>
-                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFw-Mn-RbG">
                                 <rect key="frame" x="104" y="593" width="167" height="54"/>
@@ -358,17 +352,25 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kanban" translatesAutoresizingMaskIntoConstraints="NO" id="fv9-m7-e6g">
+                                <rect key="frame" x="37" y="24" width="300" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="お 品 書 き" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aN0-ai-dgP">
+                                <rect key="frame" x="57" y="24" width="260" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="DFWaWaSC-W5" family="Wawati SC" pointSize="29"/>
+                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jvV-Sv-WJs" firstAttribute="leading" secondItem="lKe-lg-aQB" secondAttribute="leading" id="8bg-vR-eju"/>
                             <constraint firstItem="UFw-Mn-RbG" firstAttribute="top" secondItem="J4z-cQ-3Af" secondAttribute="bottom" constant="8" id="BM5-gi-h9R"/>
-                            <constraint firstItem="J4z-cQ-3Af" firstAttribute="top" secondItem="oUv-qn-G8i" secondAttribute="bottom" constant="19" id="Dcn-C7-p0L"/>
                             <constraint firstItem="UFw-Mn-RbG" firstAttribute="centerX" secondItem="lKe-lg-aQB" secondAttribute="centerX" id="F3U-Uw-4pX"/>
-                            <constraint firstItem="oUv-qn-G8i" firstAttribute="centerX" secondItem="lKe-lg-aQB" secondAttribute="centerX" id="G5P-oT-VUB"/>
                             <constraint firstItem="pgX-Ss-dgw" firstAttribute="top" secondItem="UFw-Mn-RbG" secondAttribute="bottom" constant="20" id="IbL-nf-hGP"/>
                             <constraint firstItem="jvV-Sv-WJs" firstAttribute="top" secondItem="lKe-lg-aQB" secondAttribute="top" id="V6j-iO-Pq0"/>
-                            <constraint firstItem="oUv-qn-G8i" firstAttribute="top" secondItem="MbP-JB-nPU" secondAttribute="bottom" constant="10" id="dzq-WV-L1y"/>
                             <constraint firstItem="J4z-cQ-3Af" firstAttribute="centerX" secondItem="lKe-lg-aQB" secondAttribute="centerX" id="hxy-Ko-Pt1"/>
                             <constraint firstItem="pgX-Ss-dgw" firstAttribute="top" secondItem="jvV-Sv-WJs" secondAttribute="bottom" id="sAd-5U-i8c"/>
                             <constraint firstAttribute="trailing" secondItem="jvV-Sv-WJs" secondAttribute="trailing" id="xzV-I1-k5A"/>
@@ -390,12 +392,11 @@
         <image name="camera_btn" width="70" height="70"/>
         <image name="detail_btn" width="166" height="53"/>
         <image name="home_image" width="187" height="240"/>
+        <image name="kanban" width="285" height="56"/>
         <image name="library_btn" width="70" height="70"/>
         <image name="manaita" width="75" height="75"/>
         <image name="name_ribbon" width="187" height="54"/>
-        <image name="oshinagaki" width="142" height="28"/>
         <image name="retake_btn" width="83" height="26"/>
-        <image name="sinboard_kanban" width="134" height="26"/>
         <image name="splash" width="375" height="667"/>
         <image name="wallpaper" width="187" height="333"/>
     </resources>

@@ -10,7 +10,6 @@ import UIKit
 import RealmSwift
 
 @available(iOS 11.0, *)
-@available(iOS 11.0, *)
 class libraryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBOutlet weak var sushiCollection: UICollectionView!
